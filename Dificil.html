@@ -1,0 +1,82 @@
+<html>
+<head>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const contador = localStorage.getItem('1')
+        const htmlRoot = document.getElementById('root')
+        const Imagen = () => {
+          const style = {
+            width: '200px',
+            height: '200px',
+            backgroundImage: 'url(descarga.jpeg)',
+            textAlign: 'center',
+            position: 'relative',
+            left: '44%',
+            top: '100px',
+          }
+
+          return (
+            <div style={style}> </div>
+          )
+        }
+
+        const Titulo = () => {
+          const style = {
+            fontSize: '50px',
+            textAlign: 'center',
+            color: 'white',
+            // alignSelf: 'flex-start'
+          }
+          return (
+            <h1 style={style}>GANASTE</h1>
+          )
+        }
+
+        const Pasos = () => {
+          const style = {
+            fontSize: '50px',
+            textAlign: 'center',
+            color: 'white',
+            alignSelf: 'flex-end',
+            position: 'absolute',
+            bottom: '10px',
+            left: '100px',
+            // alignSelf: 'flex-start'
+          }
+          return (
+            // eslint-disable-next-line react/jsx-one-expression-per-line
+            <h1 style={style}>Tus pasos totales fueron: + {contador} </h1>
+          )
+        }
+
+const App = () => {
+          const appStyle = {
+            backgroundImage: 'url(maxresdefault.jpg)',
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+          }
+
+          return (
+            <div style={appStyle}>
+              <Titulo />
+              <Imagen />
+              <Pasos />
+            </div>
+          )
+        }
+
+        ReactDOM.render(
+  <App />,
+          htmlRoot,
+        )
+    </script>
+</body>
+</html>

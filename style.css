@@ -1,0 +1,49 @@
+.Wall{
+background-image: url("cement.jpg");
+background-repeat: none;
+background-size: cover;
+}
+
+.Goal{
+background-image: url("http://pixelartmaker.com/art/b0c98034be36537.png"), url("images.jpeg");
+background-repeat: none;
+background-size: 100% 100%;
+}
+
+.Player{
+background-image: url("frente.png");
+background-repeat: none;
+background-size: 100% 100%;
+}
+
+.Empty{
+  background-image: url("images.jpeg");
+  background-repeat: none;
+  background-size: cover;
+}
+
+.rowStyles{
+  position: relative;
+  width:100%;
+  height:100%;
+  display: flex;
+  background-size: 100% 100%;
+}
+
+.tablero{
+  display:grid;
+  grid-template-columns: repeat(31,3.2vw);
+  grid-template-rows: repeat(21,4.65vh);
+  position: absolute;;
+  width: 100%;
+  height: 100%
+}
+
+.tablerodificil{
+  display:grid;
+  grid-template-columns: repeat(46,auto);
+  grid-template-rows: repeat(31,auto);
+  position: absolute;;
+  width: 100%;
+  height: 100%
+}

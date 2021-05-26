@@ -1,0 +1,87 @@
+﻿<html>
+<head>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const htmlRoot = document.getElementById('root')
+
+        const Imagen = () => {
+  const style = {
+            width: '200px',
+            height: '200px',
+            backgroundImage: 'url(descarga.jpeg)',
+            textAlign: 'center',
+            position: 'relative',
+            left: '44%',
+            top: '-100px',
+          }
+
+          return (
+            <div style={style}> </div>
+          )
+        }
+
+        const Titulo = () => {
+          const style = {
+            fontSize: '50px',
+            textAlign: 'center',
+            color: 'white',
+            // alignSelf: 'flex-start'
+          }
+          return (
+            <h1 style={style}>PLAYER WORLD CUP</h1>
+          )
+        }
+        const ButtonFacil = () => {
+          const style = {
+            background: 'white',
+            width: '100px',
+            height: '100px',
+            marginBottom: '10px',
+            bottom: '10px',
+            position: 'relative',
+            top: '300px',
+            left: '20px',
+            borderRadius: '25%',
+            textAlign: 'center',
+          }
+
+          const click = () => {
+            document.location.href = 'Facil.html'
+          }
+
+  return (
+            <button type="button" style={style} onClick={click}>Jugar </button>
+          )
+}
+
+        const App = () => {
+          const appStyle = {
+            backgroundImage: 'url(maxresdefault.jpg)',
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+          }
+
+  return (
+            <div style={appStyle}>
+              <Titulo />
+              <ButtonFacil />
+              <Imagen />
+            </div>
+          )
+        }
+
+        ReactDOM.render(
+          <App />,
+          htmlRoot,
+        )
+    </script>
+</body>
+</html>
